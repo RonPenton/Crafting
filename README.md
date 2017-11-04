@@ -2,6 +2,13 @@
 
 Crafting idle game idea. You're not the adventurer, you're the shopkeeper. 
 
+## Setup
+
+```
+npm install
+npm run build
+npm start
+```
 
 ## Premise
 
