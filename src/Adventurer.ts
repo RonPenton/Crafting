@@ -1,9 +1,9 @@
 import { Item } from "./Item";
-import { Named, Experienceable } from "./utils";
+import { Experienceable, Named, Quantity } from './utils';
 
 export type Adventurer = Named & Experienceable & {
     class: string;
     personality: string[];
-    inventory: Item[];
+    inventory: Quantity<Item>[];    
     encumbrance: number;
 }
