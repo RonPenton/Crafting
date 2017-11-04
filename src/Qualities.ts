@@ -5,4 +5,4 @@ export interface Quality {
     color: string;
 }
 
-export const Qualities: Dict<Quality> = nameify(require("./Qualities.json"));
+export const Qualities: Dict<Quality> = nameify(require("./data/Qualities.json"));
