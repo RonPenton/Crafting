@@ -1,7 +1,6 @@
-import { Dict, nameify } from "./utls";
+import { Dict, nameify, Named } from "./utls";
 
-export interface Class {
-    name: string;
+export type Class = Named & {
 }
 
 export const Qualities: Dict<Class> = nameify(require("./data/Classes.json"));

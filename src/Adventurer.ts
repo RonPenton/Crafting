@@ -1,5 +1,9 @@
-export interface Adventurer {
-    name: string;
+import { Item } from "./Item";
+import { Named, Experienceable } from "./utls";
+
+export type Adventurer = Named & Experienceable & {
     class: string;
-    level: number;
+    personality: string[];
+    inventory: Item[];
+    encumbrance: number;
 }

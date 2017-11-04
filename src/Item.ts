@@ -1,5 +1,5 @@
-export interface Item {
-    name: string;
-    level: number;
+import { Levelable, Named, Breakable, Valuable } from './utls';
+
+export type Item = Named & Levelable & Breakable & Valuable & {
     quality: string;
 }
