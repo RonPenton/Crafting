@@ -18,12 +18,11 @@ module.exports = {
     },
 
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".json", ".scss"]
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.tsx?$/,
                 use: ["ts-loader"]
             },
@@ -31,7 +30,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
-                //use: extractPlugin.extract({ // for prod build. Bother.
+                    //use: extractPlugin.extract({ // for prod build. Bother.
                     // use: [
                     //     'css-loader',
                     //     {
@@ -39,7 +38,7 @@ module.exports = {
                     //         options: {
                     //         }
                     //     }]
-                //})
+                    //})
             }
         ]
     },
