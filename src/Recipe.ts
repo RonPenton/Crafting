@@ -1,7 +1,7 @@
 import { Item } from "./Item";
-import { Levelable, Named, Quantity, Valuable } from './utils';
+import { Levelable, Named, Quantity, Timed, Valuable } from './utils';
 
-export type Recipe = Named & Levelable & Valuable & {
+export type Recipe = Named & Levelable & Valuable & Timed & {
     inputs: Quantity<Item>[];
     outputs: Quantity<Item>[];
 }
