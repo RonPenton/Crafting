@@ -1,3 +1,5 @@
+import * as moment from 'moment';
+
 export type Dict<T> = { [index: string]: T };
 
 export interface Named { name: string };
@@ -11,7 +13,7 @@ export const isBroken = (item: Breakable) => item.wear !== undefined && item.wea
 
 export interface Valuable { cost: number };
 
-export type Timed = { duration: number };
+export type Timed = { duration: moment.Duration };
 
 export type Quantity<T> = { item: T, quantity: number };
 
