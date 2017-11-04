@@ -1,7 +1,6 @@
-import { Dict, nameify } from "./utils";
+import { Dict, nameify, Named } from "./utils";
 
-export interface Quality {
-    name: string;
+export type Quality = Named & {
     color: string;
 }
 
