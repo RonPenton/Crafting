@@ -1,6 +1,6 @@
-# Crafting
+# Vendor Trash
 
-Crafting idle game idea
+Crafting idle game idea. You're not the adventurer, you're the shopkeeper. 
 
 
 ## Premise
