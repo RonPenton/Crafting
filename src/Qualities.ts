@@ -1,4 +1,4 @@
-import { Dict, nameify, Named } from "./utils";
+import { Dict, Named, nameify } from "./utils";
 
 export type Quality = Named & {
     color: string;

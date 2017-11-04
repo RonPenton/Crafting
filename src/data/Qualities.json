@@ -1,4 +1,7 @@
 {
+    "Trash": {
+        "color": "#9F9F9F"
+    },
     "Common": {
         "color": "#FFFFFF"
     },
@@ -7,5 +10,8 @@
     },
     "Epic": {
         "color": "#FFD044"
+    },
+    "Legendary": {
+        "color": "#CC33CC"
     }
 }

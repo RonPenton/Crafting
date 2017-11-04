@@ -1,9 +1,7 @@
 import { Item } from "./Item";
-import { Quantity } from "./utils";
+import { Levelable, Named, Quantity, Valuable } from './utils';
 
-export interface Recipe {
-    name: string;
-    level: number;
+export type Recipe = Named & Levelable & Valuable & {
     inputs: Quantity<Item>[];
     outputs: Quantity<Item>[];
 }
