@@ -1,0 +1,11 @@
+{
+    "Common": {
+        "color": "#FFFFFF"
+    },
+    "Rare": {
+        "color": "#3AEBFF"
+    },
+    "Epic": {
+        "color": "#FFD044"
+    }
+}
