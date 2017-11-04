@@ -6,8 +6,8 @@ export type Levelable = { level: number }
 
 export type Experienceable = Levelable & { experience: number; };
 
-export type Breakable = { wear: number };
-export const isBroken = (item: Breakable) => item.wear <= 0;
+export type Breakable = { wear?: number };
+export const isBroken = (item: Breakable) => item.wear !== undefined && item.wear <= 0;
 
 export type Valuable = { cost: number };
 
