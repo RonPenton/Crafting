@@ -1,9 +1,9 @@
 import { Item } from "./Item";
 import { Experienceable, Named, Quantity } from './utils';
 
-export type Adventurer = Named & Experienceable & {
+export interface Adventurer extends Named, Experienceable {
     class: string;
     personality: string[];
-    inventory: Quantity<Item>[];    
+    inventory: Quantity<Item>[];
     encumbrance: number;
 }

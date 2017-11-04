@@ -1,15 +1,15 @@
 export type Dict<T> = { [index: string]: T };
 
-export type Named = { name: string };
+export interface Named { name: string };
 
-export type Levelable = { level: number }
+export interface Levelable { level: number }
 
-export type Experienceable = Levelable & { experience: number; };
+export interface Experienceable extends Levelable { experience: number; };
 
-export type Breakable = { wear?: number };
+export interface Breakable { wear?: number };
 export const isBroken = (item: Breakable) => item.wear !== undefined && item.wear <= 0;
 
-export type Valuable = { cost: number };
+export interface Valuable { cost: number };
 
 export type Quantity<T> = { item: T, quantity: number };
 
