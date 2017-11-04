@@ -11,6 +11,8 @@ export const isBroken = (item: Breakable) => item.wear !== undefined && item.wea
 
 export interface Valuable { cost: number };
 
+export type Timed = { duration: number };
+
 export type Quantity<T> = { item: T, quantity: number };
 
 export function nameify<T extends Named>(dict: Dict<T>) {
