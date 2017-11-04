@@ -1,5 +1,5 @@
 import { Item } from "./Item";
-import { Named, Experienceable } from "./utls";
+import { Named, Experienceable } from "./utils";
 
 export type Adventurer = Named & Experienceable & {
     class: string;

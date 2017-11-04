@@ -1,4 +1,4 @@
-import { Dict, nameify, Named } from "./utls";
+import { Dict, nameify, Named } from "./utils";
 
 export type Class = Named & {
 }

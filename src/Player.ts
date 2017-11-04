@@ -1,4 +1,4 @@
-import { Experienceable, Named, Dict } from './utls';
+import { Experienceable, Named, Dict } from './utils';
 import { Recipe } from './Recipe';
 
 export type Player = Named & Experienceable & {

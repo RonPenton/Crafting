@@ -1,4 +1,4 @@
-import { Dict, nameify } from "./utls";
+import { Dict, nameify } from "./utils";
 
 export interface Quality {
     name: string;

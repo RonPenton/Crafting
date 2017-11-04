@@ -1,5 +1,5 @@
 import { Item } from "./Item";
-import { Quantity } from "./utls";
+import { Quantity } from "./utils";
 
 export interface Recipe {
     name: string;

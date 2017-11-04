@@ -15,7 +15,7 @@ export type Quantity<T> = { item: T, quantity: number };
 
 export function nameify<T extends Named>(dict: Dict<T>) {
     for (var prop in dict) {
-        document.writeln(dict[prop].name = prop);
+        dict[prop].name = prop;
     }
     return dict;
 }
