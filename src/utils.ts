@@ -17,6 +17,8 @@ export type Timed = { duration: moment.Duration };
 
 export type Quantity<T> = { item: T, quantity: number };
 
+export type UncertainQuantity<T> = { item: T, min: number, max: number };
+
 export function nameify<T extends Named>(dict: Dict<T>) {
     for (var prop in dict) {
         dict[prop].name = prop;
