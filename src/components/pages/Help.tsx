@@ -1,12 +1,12 @@
 import React from 'react';
-import { RouteComponentProps } from 'react-router';
+import { GameStateProps } from '../../utils';
 
-export class Help extends React.Component<RouteComponentProps<{}>> {
+export class Help extends React.Component<GameStateProps> {
     render() {
         return (
             <div>
                 <h2>Help</h2>
-                <p>Good luck!</p>
+                <a href="https://github.com/RonPenton/Vendor-Trash">Vendor Trash Github (submit issues!)</a>
             </div>
         );
     }

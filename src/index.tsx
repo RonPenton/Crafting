@@ -3,32 +3,32 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom'
 
 import { Game } from './components/Game';
-import { loadPlayer, Player } from './Player';
 import { Spinner } from './components/Spinner';
 
 import './vendor-trash';
+import { loadWorld, World } from './World';
 
 interface LoaderState {
-    player?: Player;
+    world?: World;
 }
 
 class Loader extends React.Component<{}, LoaderState> {
     constructor() {
         super();
         this.state = {};
-        this.loadPlayer();
+        this.load();
     }
 
-    async loadPlayer() {
-        const player = await loadPlayer();
-        this.setState({ player });
+    async load() {
+        const world = await loadWorld();
+        this.setState({ world });
     }
 
     render() {
-        if (this.state.player) {
+        if (this.state.world) {
             return (
                 <HashRouter>
-                    <Game player={this.state.player} />
+                    <Game world={this.state.world} />
                 </HashRouter>
             );
         }

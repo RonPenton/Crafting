@@ -1,27 +1,26 @@
 import Dexie from 'dexie';
-import { Player } from './Player';
+import { World } from './World';
 
 export class Database extends Dexie {
-    player: Dexie.Table<Player, number>;
+    world: Dexie.Table<World, number>;
 
     constructor() {
         super("Database");
-        this.version(1).stores({
-            player: '&id'
+        this.version(2).stores({
+            world: '&id'
         });
     }
 
-    public async savePlayer(player: Player) {
-        (player as any).id = 0; // ensure the ID is 0 so we always store a single object.
-        await this.transaction("rw", this.player, async () => {
-            await this.player.put(player);
+    public async saveWorld(world: World) {
+        (world as any).id = 0; // ensure the ID is 0 so we always store a single object.
+        await this.transaction("rw", this.world, async () => {
+            await this.world.put(world);
         });
     }
 
-    public async loadPlayer() {
-        return await this.player.get(0);
+    public async loadWorld() {
+        return await this.world.get(0);
     }
 }
 
 export const db = new Database();
-

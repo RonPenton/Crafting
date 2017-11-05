@@ -14,7 +14,7 @@ export class DemoCrap extends React.Component<DemoCrapProps> {
         return (
             <div>
                 <div>
-                    {`Player Name: ${this.props.player.name}`}
+                    {`Player Name: ${this.props.world.player.name}`}
                 </div>
                 <div>
                     {`Path Parameter: ${this.props.match.params.id}`}

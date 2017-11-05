@@ -1,7 +1,7 @@
 import React from 'react';
-import { RouteComponentProps } from 'react-router';
+import { GameStateProps } from '../../utils';
 
-export class Entry extends React.Component<RouteComponentProps<{}>> {
+export class Entry extends React.Component<GameStateProps> {
     render() {
         return <div>Welcome To Vendor Trash</div>;
     }
