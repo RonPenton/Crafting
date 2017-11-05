@@ -1,5 +1,7 @@
+import { generateName } from './Adventurer';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as R from 'ramda';
 
 import { GameIcon, Presets } from './components/icons/GameIcon';
 import { IconBadgeRun } from './components/icons/IconBadgeRun';
@@ -22,6 +24,10 @@ export const VendorTrash: React.SFC = () => {
                     placement="bottom-right"
                     items={[{ badge: "arrow-down", backgroundColor: "red" }, { badge: "arrow-up", backgroundColor: "green" }]} />
             </GameIcon>
+            <div>
+                <div>{R.range(1, 50).map(_ => <div>{generateName("male")}</div>)}</div>
+                <div>{R.range(1, 50).map(_ => <div>{generateName("female")}</div>)}</div>
+            </div>
         </Layout>
     );
 }

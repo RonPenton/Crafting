@@ -48,6 +48,6 @@ module.exports = {
     externals: {
         'react': 'React',
         'react-dom': 'ReactDOM',
-        'ramda': 'Ramda',
+        'ramda': 'R',
     },
 };
