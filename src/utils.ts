@@ -1,4 +1,6 @@
 import * as moment from 'moment';
+import { RouteComponentProps } from 'react-router';
+import { Player } from './Player';
 
 export type Dict<T> = { [index: string]: T };
 
@@ -25,3 +27,7 @@ export function nameify<T extends Named>(dict: Dict<T>) {
     }
     return dict;
 }
+
+export type WithRoute<T, RT = {}> = T & RouteComponentProps<RT>;
+
+export type GameStateProps<T = {}> = WithRoute<{player: Player}, T>;

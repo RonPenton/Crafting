@@ -20,7 +20,9 @@ export interface Adventurer extends Named, Experienceable {
  * Generates a random name from the name database.
  * @param gender the gender of the name.
  */
-export function generateName(gender: Gender) {
+export function generateName(gender?: Gender) {
+    if (!gender)
+        gender = randomElement(["male", "female"]) as Gender;
     const fns = FirstNames[gender];
     return `${randomElement(fns)} ${randomElement(Surnames)}`;
 }

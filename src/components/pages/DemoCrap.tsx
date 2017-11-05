@@ -5,11 +5,20 @@ import { GameIcon, Presets } from '../../components/icons/GameIcon';
 import { IconBadge } from '../../components/icons/IconBadge';
 import { IconBadgeRun } from '../../components/icons/IconBadgeRun';
 import { generateName } from '../../Adventurer';
+import { GameStateProps } from '../../utils';
 
-export class DemoCrap extends React.Component {
+export type DemoCrapProps = GameStateProps<{ id?: number }>;
+
+export class DemoCrap extends React.Component<DemoCrapProps> {
     render() {
         return (
             <div>
+                <div>
+                    {`Player Name: ${this.props.player.name}`}
+                </div>
+                <div>
+                    {`Path Parameter: ${this.props.match.params.id}`}
+                </div>
                 <GameIcon icon="chest-armor" size={80} {...Presets.Crimson} />
                 <GameIcon icon="piercing-sword" size={80} {...Presets.Gold} />
                 <GameIcon icon="pocket-bow" size={80} {...Presets.Ice} />
