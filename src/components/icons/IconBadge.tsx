@@ -2,7 +2,7 @@ import { Placement } from './IconBadgeRun';
 import { GameIconG } from './GameIcon';
 import React from 'react';
 
-export type Badge = "anvil" | "arrow-down" | "arrow-up" | "blank" | "body" | "bolt" | "cloud" | "cog" | "crown" | "fire" | "happy" | "heart" | "ice" | "leaf" | "lock" | "minus" | "moon" | "multiply" | "music" | "plus" | "radioactive" | "sad" | "sergeant" | "shield" | "skull" | "star" | "sun" | "time" | "water";
+export type Badge = "anvil" | "arrow-down" | "arrow-up" | "blank" | "body" | "bolt" | "cloud" | "cog" | "crown" | "fire" | "happy" | "heart" | "ice" | "leaf" | "lock" | "minus" | "moon" | "multiply" | "music" | "plus" | "radioactive" | "sad" | "rank-1" | "rank-2" | "rank-3" | "shield" | "skull" | "star" | "sun" | "time" | "water";
 
 export type IconBadgeProps = {
     badge: Badge;

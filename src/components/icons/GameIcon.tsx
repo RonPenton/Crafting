@@ -153,7 +153,7 @@ export class GameIconG extends React.Component<GameIconProps, GameIconState> {
     }
 }
 
-export const Presets /*: { [key: string]: GameIconPresetProps }*/ = {
+export const Presets: { [key: string]: GameIconPresetProps } = {
     Default: {
         background: "#000",
         foreground: "#fff"

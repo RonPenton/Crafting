@@ -1,17 +1,22 @@
 {
     "Trash": {
-        "color": "#9F9F9F"
+        "color": "#9F9F9F",
+        "badge": "anvil"
     },
     "Common": {
-        "color": "#FFFFFF"
+        "color": "#FFFFFF",
+        "badge": "rank-1"
     },
     "Rare": {
-        "color": "#3AEBFF"
+        "color": "#3AEBFF",
+        "badge": "rank-2"
     },
     "Epic": {
-        "color": "#FFD044"
+        "color": "#FFD044",
+        "badge": "rank-3"
     },
     "Legendary": {
-        "color": "#CC33CC"
+        "color": "#CC33CC",
+        "badge": "crown"
     }
 }

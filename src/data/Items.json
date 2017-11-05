@@ -1,5 +1,37 @@
 {
     "Oak Log": {
-        "type": "ingredient"
+        "type": "ingredient",
+        "level": 1,
+        "quality": "Trash",
+        "icon": "log",
+        "preset": "Forest"
+    },
+    "Maple Log": {
+        "type": "ingredient",
+        "level": 11,
+        "quality": "Common",
+        "icon": "log",
+        "preset": "Forest"
+    },
+    "Birch Log": {
+        "type": "ingredient",
+        "level": 21,
+        "quality": "Rare",
+        "icon": "log",
+        "preset": "Forest"
+    },
+    "Beech Log": {
+        "type": "ingredient",
+        "level": 31,
+        "quality": "Epic",
+        "icon": "log",
+        "preset": "Forest"
+    },
+    "Mahogany Log": {
+        "type": "ingredient",
+        "level": 41,
+        "quality": "Legendary",
+        "icon": "log",
+        "preset": "Forest"
     }
 }

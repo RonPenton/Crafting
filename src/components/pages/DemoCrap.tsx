@@ -6,6 +6,8 @@ import { IconBadge } from '../../components/icons/IconBadge';
 import { IconBadgeRun } from '../../components/icons/IconBadgeRun';
 import { generateName } from '../../Adventurer';
 import { GameStateProps } from '../../utils';
+import { Items } from '../../Item';
+import { ItemIcon } from '../icons/ItemIcon';
 
 export type DemoCrapProps = GameStateProps<{ id?: number }>;
 
@@ -19,6 +21,7 @@ export class DemoCrap extends React.Component<DemoCrapProps> {
                 <div>
                     {`Path Parameter: ${this.props.match.params.id}`}
                 </div>
+                {this.renderItems()}
                 <GameIcon icon="chest-armor" size={80} {...Presets.Crimson} />
                 <GameIcon icon="piercing-sword" size={80} {...Presets.Gold} />
                 <GameIcon icon="pocket-bow" size={80} {...Presets.Ice} />
@@ -28,7 +31,7 @@ export class DemoCrap extends React.Component<DemoCrapProps> {
                 <GameIcon icon="flail" size={80} {...Presets.Air}>
                     <IconBadgeRun
                         placement="bottom-right"
-                        items={[{ badge: "arrow-down", backgroundColor: "red" }, { badge: "arrow-up", backgroundColor: "green" }]} />
+                        items={[{ badge: "rank-1", backgroundColor: "red" }, { badge: "rank-2", backgroundColor: "green" }, { badge: "rank-3", backgroundColor: "green" }]} />
                 </GameIcon>
                 <div>
                     <div>{R.range(1, 50).map(_ => <div>{generateName("male")}</div>)}</div>
@@ -36,5 +39,17 @@ export class DemoCrap extends React.Component<DemoCrapProps> {
                 </div>
             </div>
         );
+    }
+
+    renderItems() {
+        const items = [
+            Items["Oak Log"],
+            Items["Maple Log"],
+            Items["Birch Log"],
+            Items["Beech Log"],
+            Items["Mahogany Log"]
+        ];
+
+        return items.map(item => <ItemIcon item={item} size={80} />)
     }
 }
