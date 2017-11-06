@@ -33,5 +33,19 @@
         "quality": "Legendary",
         "icon": "log",
         "preset": "Wood"
+    },
+    "Crimson Sword of Death": {
+        "type": "weapon",
+        "level": 51,
+        "quality": "Legendary",
+        "icon": "piercing-sword",
+        "preset": "Crimson"
+    },
+    "Radioactive Axe of Killing": {
+        "type": "weapon",
+        "level": 51,
+        "quality": "Epic",
+        "icon": "war-axe",
+        "preset": "Poison"
     }
 }

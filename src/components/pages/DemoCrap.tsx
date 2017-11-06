@@ -47,7 +47,9 @@ export class DemoCrap extends React.Component<DemoCrapProps> {
             Items["Maple Log"],
             Items["Birch Log"],
             Items["Beech Log"],
-            Items["Mahogany Log"]
+            Items["Mahogany Log"],
+            Items["Crimson Sword of Death"],
+            Items["Radioactive Axe of Killing"]
         ];
 
         return items.map(item => <ItemIcon item={item} size={80} />)
