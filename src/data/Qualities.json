@@ -12,11 +12,11 @@
         "badge": "rank-2"
     },
     "Epic": {
-        "color": "#FFD044",
+        "color": "#CC33CC",
         "badge": "rank-3"
     },
     "Legendary": {
-        "color": "#CC33CC",
+        "color": "#FFD044",
         "badge": "crown"
     }
 }

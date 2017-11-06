@@ -61,8 +61,10 @@ export const GameIcon: React.SFC<GameIconPropsWithSize> = props => {
         width: `${props.size}px`,
         height: `${props.size}px`
     }
+    const extra = 512 + (props.backgroundStrokeWidth || 0);
+    const viewbox = `0 0 ${extra} ${extra}`;
     return (
-        <svg viewBox="0 0 512 512" style={style} className="game-icon">
+        <svg viewBox={viewbox} style={style} className="game-icon">
             <GameIconG {...props} />
         </svg>
     );
@@ -111,8 +113,9 @@ export class GameIconG extends React.Component<GameIconProps, GameIconState> {
         const foreground = this.props.foreground || "white";
         const fopacity = this.props.foregroundOpacity === undefined ? 1 : this.props.foregroundOpacity;
         const filter = this.props.shadow ? `url(#shadow-${this.id})` : undefined;
+        const translate = this.props.backgroundStrokeWidth ? this.props.backgroundStrokeWidth / 2 : 0;
         return (
-            <g>
+            <g transform={`translate(${translate}, ${translate})`}>
                 {this.renderDefs()}
 
                 <GameIconBackground {...this.props} />
