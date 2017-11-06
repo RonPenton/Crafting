@@ -40,12 +40,13 @@ export const GameIconBackground: React.SFC<BackgroundIconProps> = props => {
     const bstroke = props.backgroundStroke || "black";
     const bstrokew = props.backgroundStrokeWidth || 8;
     const bstroker = props.backgroundStrokeRadius || 20;
+    const size = (props.backgroundStrokeWidth || 0) + 512;
     return (
         <rect stroke={bstroke}
             fill={background}
             opacity={bopacity}
             x="0" y="0"
-            width="512" height="512"
+            width={size} height={size}
             stroke-width={bstrokew}
             rx={bstroker} ry={bstroker} />
     );
@@ -61,7 +62,7 @@ export const GameIcon: React.SFC<GameIconPropsWithSize> = props => {
         width: `${props.size}px`,
         height: `${props.size}px`
     }
-    const extra = 512 + (props.backgroundStrokeWidth || 0);
+    const extra = 512 + ((props.backgroundStrokeWidth || 0) * 2);
     const viewbox = `0 0 ${extra} ${extra}`;
     return (
         <svg viewBox={viewbox} style={style} className="game-icon">
@@ -125,6 +126,7 @@ export class GameIconG extends React.Component<GameIconProps, GameIconState> {
                     filter={filter}
                     stroke={this.props.strokeColor}
                     strokeWidth={this.props.strokeWidth}
+                    transform={`translate(${translate}, ${translate})`}
                 />
                 {this.props.children}
             </g>
