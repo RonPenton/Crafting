@@ -23,7 +23,6 @@
     },
     "homepage": "https://github.com/RonPenton/Vendor-Trash#readme",
     "dependencies": {
-        "@types/random-js": "^1.0.30",
         "css-loader": "^0.28.7",
         "decko": "^1.2.0",
         "dexie": "^2.0.1",
@@ -44,6 +43,7 @@
     },
     "devDependencies": {
         "@types/ramda": "^0.25.3",
+        "@types/random-js": "^1.0.30",
         "@types/react": "^16.0.22",
         "@types/react-dom": "^16.0.3",
         "@types/react-router": "^4.0.17",

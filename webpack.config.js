@@ -46,8 +46,11 @@ module.exports = {
     ],
 
     externals: {
+        'dexie': 'Dexie',
+        'ramda': 'R',
         'react': 'React',
         'react-dom': 'ReactDOM',
-        'ramda': 'R',
+        'react-router': 'ReactRouter',
+        'react-router-dom': 'ReactRouterDOM',
     },
 };
