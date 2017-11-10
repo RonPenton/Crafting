@@ -4,8 +4,8 @@
     "description": "You're not the adventurer, you're the shopkeeper.",
     "main": "./dist/bundle.js",
     "scripts": {
-        "start": "webpack-dev-server --open",
-        "build": "webpack",
+        "start": "webpack-dev-server --open -d --hot",
+        "build": "webpack --define process.env.NODE_ENV=production",
         "test": "test"
     },
     "repository": {

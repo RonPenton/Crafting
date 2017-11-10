@@ -30,7 +30,6 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: ['ts-loader'],
             },
-
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
@@ -41,12 +40,11 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('[name].css'),
         new HtmlWebpackPlugin({ template: './src/index.ejs' }),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
     ],
 
     externals: {
         'dexie': 'Dexie',
+        'moment': 'moment',
         'ramda': 'R',
         'react': 'React',
         'react-dom': 'ReactDOM',
