@@ -14,7 +14,7 @@ interface LoaderState {
 
 class Loader extends React.Component<{}, LoaderState> {
     constructor() {
-        super();
+        super({});
         this.state = {};
         this.load();
     }

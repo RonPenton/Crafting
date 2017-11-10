@@ -9,8 +9,8 @@ export interface DebugState {
 }
 
 export class Debug extends React.Component<GameStateProps, DebugState> {
-    constructor() {
-        super();
+    constructor(props: GameStateProps) {
+        super(props);
         this.state = {};
     }
 

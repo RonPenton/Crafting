@@ -13,8 +13,8 @@ interface ConfirmButtonState {
 }
 
 export class ConfirmButton extends React.PureComponent<ConfirmButtonProps, ConfirmButtonState> {
-    constructor() {
-        super();
+    constructor(props: ConfirmButtonProps) {
+        super(props);
         this.state = {};
     }
 
