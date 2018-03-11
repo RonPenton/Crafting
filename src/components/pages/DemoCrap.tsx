@@ -34,8 +34,7 @@ export class DemoCrap extends React.Component<DemoCrapProps> {
                         items={[{ badge: "rank-1", backgroundColor: "red" }, { badge: "rank-2", backgroundColor: "green" }, { badge: "rank-3", backgroundColor: "green" }]} />
                 </GameIcon>
                 <div>
-                    <div>{R.range(1, 50).map(_ => <div>{generateName("male")}</div>)}</div>
-                    <div>{R.range(1, 50).map(_ => <div>{generateName("female")}</div>)}</div>
+                    <div>{R.range(1, 100).map(_ => <div>{generateName()}</div>)}</div>
                 </div>
             </div>
         );
